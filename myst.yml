@@ -1,0 +1,18 @@
+version: 1
+
+project:
+  title: "Web Mining"
+  description: "Dokumentasi Pembelajaran dan Project Web Mining"
+  keywords:
+    - Web Mining
+    - Data Mining
+    - Web Crawling
+    - Python
+
+  toc:
+    - file: intro.md
+    - file: mahasiswa.md
+    - file: pengantar-web-mining.md
+
+site:
+  template: book-theme
