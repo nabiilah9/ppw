@@ -1,0 +1,19 @@
+# Virtual environment
+nWebmining/
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter Book build
+_build/
+
+# OS
+.DS_Store
+Thumbs.db
