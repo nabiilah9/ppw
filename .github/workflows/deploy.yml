@@ -31,7 +31,12 @@ jobs:
 
       - name: Build Jupyter Book
         run: |
-          jupyter book build .
+          jupyter book build --html
+
+      - name: Check build output
+        run: |
+          ls -la _build
+          ls -la _build/html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
