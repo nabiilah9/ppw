@@ -13,6 +13,7 @@ project:
     - file: intro.md
     - file: mahasiswa.md
     - file: pengantar-web-mining.md
+    - file: crawling.ipynb
 
 site:
   template: book-theme
