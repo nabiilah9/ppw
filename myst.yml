@@ -10,7 +10,6 @@ project:
     - Python
 
   toc:
-    - file: intro.md
     - file: mahasiswa.md
     - file: pengantar-web-mining.md
     - file: crawling.ipynb
