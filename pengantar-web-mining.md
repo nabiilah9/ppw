@@ -2,7 +2,7 @@
 
 ## Pengertian Web Mining
 
-Web Mining merupakan proses penerapan teknik data mining untuk menemukan informasi, pola, dan pengetahuan yang bermanfaat dari data yang terdapat di World Wide Web.
+Web Mining merupakan proses penerapan teknik data mining untuk menemukan informasi, pola, dan pengetahuan yang bermanfaat dari data yang terdapat di web (World Wide Web).
 
 Data yang terdapat pada web memiliki berbagai bentuk, seperti teks, gambar, hyperlink, dokumen, dan data aktivitas pengguna.
 
