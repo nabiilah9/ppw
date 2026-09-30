@@ -14,6 +14,7 @@ project:
     - file: pengantar-web-mining.md
     - file: crawling.ipynb
     - file: Klasifikasi-Berita.ipynb
+    - file: skipgram.ipynb
 
 
 site:
