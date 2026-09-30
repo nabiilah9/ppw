@@ -16,6 +16,5 @@ project:
     - file: Klasifikasi-Berita.ipynb
     - file: skipgram.ipynb
 
-
 site:
   template: book-theme
