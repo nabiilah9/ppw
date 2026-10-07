@@ -1,0 +1,17 @@
+{
+    "skenario": "dengan_stopword_removal",
+    "stopword_removal": true,
+    "window": 5,
+    "vector_size": 98,
+    "akurasi": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "vocabulary": 5299,
+    "embedding_rows": 5299,
+    "embedding_cols": 98,
+    "ukuran_embedding": "5299 × 98",
+    "vsm_rows": 200,
+    "vsm_cols": 98,
+    "model_embedding": "Word2Vec Skip-gram",
+    "model_classifier": "GaussianNB"
+}

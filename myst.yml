@@ -13,7 +13,8 @@ project:
     - file: mahasiswa.md
     - file: pengantar-web-mining.md
     - file: crawling.ipynb
-    - file: Klasifikasi-Berita.ipynb
+    - file: Klasifikasi-Berita-TfIdf.ipynb
+    - file: Klasifikasi-Berita-TfIdf-Pca.ipynb
     - file: skipgram.ipynb
 
 site:
