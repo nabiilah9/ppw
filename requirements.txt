@@ -1,0 +1,8 @@
+
+streamlit
+joblib
+numpy
+requests
+beautifulsoup4
+gensim
+Sastrawi
