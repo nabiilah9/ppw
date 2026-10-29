@@ -9,14 +9,12 @@ from gensim.models import Word2Vec
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
-# LOAD MODEL DAN SASTRAWI (Gunakan Cache)
 @st.cache_resource
 def load_models_and_tools():
     # Load Model Machine Learning
     skipgram_model = Word2Vec.load("model_streamlit/best_skipgram.model")
     nb_classifier = joblib.load("model_streamlit/best_naive_bayes.joblib")
     
-    # Load Sastrawi Tools
     stopword_factory = StopWordRemoverFactory()
     stopwords = set(stopword_factory.get_stop_words())
     stemmer_factory = StemmerFactory()
@@ -26,8 +24,6 @@ def load_models_and_tools():
 
 skipgram_model, nb_classifier, stopwords, stemmer = load_models_and_tools()
 
-
-# FUNGSI WEB SCRAPING BERITA DETIK
 def scrape_detik(url):
     try:
         headers = {'User-Agent': 'Mozilla/5.0'}
@@ -48,29 +44,22 @@ def scrape_detik(url):
         st.error(f"Terjadi kesalahan saat scraping: {e}")
         return None
 
-# FUNGSI PREPROCESSING & VEKTORISASI
 def preprocess_text(text, stopwords, stemmer):
     text = str(text).lower()
     
-    # Cleaning
     text = re.sub(r'\([a-z]{2,5}/[a-z]{2,5}\)', ' ', text, flags=re.IGNORECASE)
     text = text.translate(str.maketrans("", "", string.punctuation))
     text = re.sub(r"[^a-zA-Z\s]", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
     
-    # Tokenisasi
     tokens = text.split()
-    
-    # Stopword Removal
     tokens = [word for word in tokens if word not in stopwords]
     
-    # Stemming
     tokens = [stemmer.stem(word) for word in tokens]
     
     return tokens
 
 def get_document_vector(model, tokens):
-    # Rata-rata vektor kata dalam satu dokumen
     vectors = [model.wv[w] for w in tokens if w in model.wv]
     if len(vectors) == 0:
         return np.zeros(model.vector_size)
